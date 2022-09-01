@@ -1,0 +1,50 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Demo-checker
+
+# Controls when the workflow will run
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["demo-sync"]
+    types:
+      - completed
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: [github-runner_ABC-1]
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+            path: 'Repo'
+            
+      # Runs a set of commands using the runners shell
+      - name: Install software
+        run: |
+          sudo apt-get update
+          wget $(curl -s https://api.github.com/repos/rclone/rclone/releases/latest | jq -r '.assets | .[] | select(.browser_download_url | contains("-linux-amd64.deb")) | .browser_download_url') -O ./rclone.deb && sudo apt-get install -y ./rclone.deb
+          sudo apt-get install -y jq wget curl bc python3-dev
+          rclone config file
+          cp ./Repo/5.json /root/.config/rclone/5.json
+          cp ./Repo/rclone.conf /root/.config/rclone/rclone.conf
+          python3 -m pip install --upgrade pip
+          pip3 install csvkit
+          pip3 install mysql-connector-python
+        
+      # Runs a set of commands using the runners shell
+      - name: Run check
+        run: |
+          cd ./Repo/
+          chmod +x ./run-gdrive.sh
+          chmod +x ./discord.sh
+          pip3 install -r requirements.txt
+          echo pip3 install DLAC
+          rclone copyto "demo-7-5:/Unlabelled-log.txt" "./Unlabelled-log.txt" -vv --drive-chunk-size=256M --buffer-size=256M
+          ./run-gdrive.sh ./DLAC/parser.go
+          rclone copyto "./Unlabelled-log.txt" "demo-7-5:/Unlabelled-log.txt" -vv --drive-chunk-size=256M --buffer-size=256M

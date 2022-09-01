@@ -1,0 +1,13 @@
+                ██╗   ██╗ █████╗    ███╗   ██╗    █████╗ 
+                ╚██╗ ██╔╝██╔══██╗   ████╗  ██║   ██╔══██╗
+                 ╚████╔╝ ███████║   ██╔██╗ ██║   ███████║
+                  ╚██╔╝  ██╔══██║   ██║╚██╗██║   ██╔══██║
+                   ██║██╗██║  ██║██╗██║ ╚████║██╗██║  ██║
+                   ╚═╝╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝   
+
+
+Two Commands 
+
+npm run setup : so all the Node js and python dependencies will install 
+
+npm start <path_To_CSV_File> or <Link_To_Dem> : the script will start and it will keep you update on the cmd

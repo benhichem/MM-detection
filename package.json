@@ -1,0 +1,17 @@
+{
+  "name": "mm-detection",
+  "version": "1.0.0",
+  "description": "Read, Download, Extract and Proccess a Demo file",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "setup":"npm install && pip install -r ./processor/requirements.txt ",
+    "single":"node ./dist/index",
+    "file":"node ./dist/index "   
+  },
+  "author": "Y.A.N.A",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.7.14"
+  }
+}
