@@ -26,22 +26,16 @@ jobs:
           python-version: "3.7" # Version range or exact version of a Python version to use, using SemVer's version range syntax
           architecture: "x64" # optional x64 or x86. Defaults to x64 if not specified
 
-    
-
-        # Runs a set of commands using the runners shell
-      - name: rclone
-      - run: 'rclone lsd --http-url https://beta.rclone.org :http:'
-      - run: 'rclone lsd :http:'
-      env:
-        RCLONE_HTTP_URL: https://beta.rclone.org
-        # Runs a set of commands using the runners shell
-
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-linke script
+        run: |
+          apt install rclone -y
+      # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
           node -v
           npm run setup
         # Runs a set of commands using the runners shell
-
       - name: Run a multi-line script
         run: |
           npm run single https://demos-europe-west2.faceit-cdn.net/csgo/1-4ae0e998-bd3e-47b0-935c-5da09438614d-1-1.dem.gz
