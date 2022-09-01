@@ -8,7 +8,6 @@ const DemFolder = path.join(__dirname, "Downloads");
 //Get All Arguments From Command Line
 
 const argumnts = process.argv;
-console.log(argumnts);
 
 class MM {
   /**
@@ -37,7 +36,7 @@ class MM {
      *  @returns boolean True if its a Demo Link False if its a Path
      *  @arguments type string path or a Demo link
      */
-    console.log(this._Link);
+
     if (this._Link.startsWith("https://")) {
       this._DemoLinks = [{ SteamID: Date.now().toString(), Link: this._Link }];
       return true;
@@ -93,7 +92,6 @@ class MM {
     FilesNames.map(async (FileName) => {
       try {
         console.log("[+] Python Script starting with Folder :" + FileName);
-        // console.log(Execution.toString());
         let Execution = await execSync(
           `python3 ./processor/test.py ${FileName}/`
         );
