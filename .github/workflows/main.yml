@@ -25,10 +25,10 @@ jobs:
         with:
           python-version: "3.7" # Version range or exact version of a Python version to use, using SemVer's version range syntax
           architecture: "x64" # optional x64 or x86. Defaults to x64 if not specified
-      - name: rclone-action
+      - name: rclone-action-integration
         # You may pin to the exact commit or the version.
-        # uses: andreiio/rclone-action@15e1c2425eaa749260a371f88cc05f9de68fee4b
-        uses: andreiio/rclone-action@v1.1.1
+        uses: andreiio/rclone-action@15e1c2425eaa749260a371f88cc05f9de68fee4b
+        #uses: andreiio/rclone-action@v1.1.1
         
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
