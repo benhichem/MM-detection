@@ -46,7 +46,7 @@ jobs:
         with:
           name: somethingCool
           # A file, directory or wildcard pattern that describes what to upload
-          path: dist/1662114235698.csv
+          path: dist/cool.csv
           # The desired behavior if no files are found using the provided path.
           if-no-files-found: error
           retention-days: 1
