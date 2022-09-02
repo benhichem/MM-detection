@@ -6,7 +6,7 @@ args = sys.argv
 print(args)
 path = "./dist/Downloads/"+args[1]
 
-distination = "./dist/Downloads/ouputs/"+args[1]+".csv"
+distination = "./dist/Downloads/ouputs/"+args[1][:-1]+".csv"
 
 
 model = Model(path)
