@@ -3,8 +3,9 @@ from DLAC import Model
 import sys
 
 args = sys.argv
-
+print(args)
 #path = "./dist/Downloads/"+args[1]
+
 path = "./testing/"
 distination = "./dist/Downloads/cool.csv"
 
