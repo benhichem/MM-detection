@@ -4,7 +4,8 @@ import sys
 
 args = sys.argv
 
-path = "./dist/Downloads/"+args[1]
+#path = "./dist/Downloads/"+args[1]
+path = "./testing/"
 distination = "./dist/Downloads/cool.csv"
 
 
