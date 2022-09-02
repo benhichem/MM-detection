@@ -5,7 +5,7 @@ import sys
 args = sys.argv
 
 path = "./dist/Downloads/"+args[1]
-distination = "./dist/Downloads/"+args[1][:-1]+".csv"
+distination = "./dist/Downloads/cool.csv"
 
 
 model = Model(path)
