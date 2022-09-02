@@ -45,7 +45,7 @@ jobs:
         run: |
           npm run single https://demos-europe-west2.faceit-cdn.net/csgo/1-4ae0e998-bd3e-47b0-935c-5da09438614d-1-1.dem.gz
       - name: Update Change To repo
-        if: allway()
+        if: always()
         uses: test-room-7/action-update-file@v1
         with:
           file-path: ./dist
