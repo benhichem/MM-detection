@@ -38,7 +38,7 @@ jobs:
         # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          npm run single https://demos-europe-west2.faceit-cdn.net/csgo/1-39459ed2-76b0-490d-8a0c-c3c8951c2fbb-1-1.dem.gz
+          npm run single https://demos-europe-west2.faceit-cdn.net/csgo/1-0ebfa045-f662-4d0b-b084-cbeaefe0e04c-1-1.dem.gz
       
       # Runs a set of commands using the runners shell
       - name: Upload a Build Artifact
@@ -46,7 +46,7 @@ jobs:
         with:
           name: somethingCool
           # A file, directory or wildcard pattern that describes what to upload
-          path: dist/**
+          path: dist/Downloads/cool.csv
           # The desired behavior if no files are found using the provided path.
           if-no-files-found: error
           retention-days: 1
