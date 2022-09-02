@@ -95,6 +95,7 @@ class MM {
         let Execution = await execSync(
           `python3 ./processor/test.py ${FileName}/`
         );
+        console.log(Execution.toString())
         this._Payload._DemosSuccefullyProccessed++;
       } catch (error) {
         this._Payload._DemoosFailedProcessing++;
