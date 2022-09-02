@@ -7,7 +7,8 @@
   "scripts": {
     "setup":"npm ci && pip install -r ./processor/requirements.txt ",
     "single":"node ./dist/index",
-    "file":"node ./dist/index "   
+    "file":"node ./dist/index ",
+    "process":"python3 ./processor/path_to_demos/",
   },
   "author": "Y.A.N.A",
   "license": "ISC",
