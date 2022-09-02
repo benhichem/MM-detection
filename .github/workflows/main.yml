@@ -38,7 +38,7 @@ jobs:
         # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          npm run single https://demos-europe-west2.faceit-cdn.net/csgo/1-4ae0e998-bd3e-47b0-935c-5da09438614d-1-1.dem.gz
+          npm run single https://demos-europe-west2.faceit-cdn.net/csgo/1-39459ed2-76b0-490d-8a0c-c3c8951c2fbb-1-1.dem.gz
       
       # Runs a set of commands using the runners shell
       - name: Upload a Build Artifact
