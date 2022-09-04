@@ -39,7 +39,7 @@ jobs:
         # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          npm run file input.csv
+          npm run single https://cdn.discordapp.com/attachments/978963053154562089/1010093733477351424/2642fd545f2cbfcd.dem
       
       # Runs a set of commands using the runners shell
       - name: Upload a Build Artifact
